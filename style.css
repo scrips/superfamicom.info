@@ -1,143 +1,184 @@
-@charset "Shift_JIS";
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
 html * {
-        -moz-box-sizing : border-box;
-        border          : 0px;
-        padding         : 0px;
-        margin          : 0px;
+  border: 0px;
+  padding: 0px;
+  margin: 0px;
 }
 
 body{
-        min-width       : 800px;
-        margin          : 20px;
-        text-align      : center;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background: #fff;
 }
 
 p {
-        line-height     : 120%;
-        font-size       : 80%;
-        margin-bottom   : 12pt;
+  line-height: 120%;
+  font-size: 80%;
+  margin-bottom: 12pt;
 }
 
-a               { border: 0px;          padding         : 0px;}
-a:link          { color : #666666;      font-weight     : bold; text-decoration : none; }
-a:visited       { color : #666666;      font-weight     : bold; text-decoration : none; }
-a:hover         { color : red;          font-weight     : bold; text-decoration : underline; }
-a:active        { color : red;          font-weight     : bold; text-decoration : underline; }
+a { border: 0px; padding: 0px;}
+a:link { color : #666666; font-weight : bold; text-decoration : none; }
+a:visited { color : #666666; font-weight : bold; text-decoration : none; }
+a:hover { color : red; font-weight : bold; text-decoration : underline; }
+a:active { color : red; font-weight : bold; text-decoration : underline; }
 
-
+/* 固定800pxを100%に、左寄せだけ追加 */
 h1 {
-        clear           : both;
-        font-size       : 80%;
-        width           : 800px;
-        background-color: #EEEEEE;
+  margin-top: 2px;
+  clear: both;
+  font-size: 80%;
+  width: 100%;
+  background-color: #EEEEEE;
+  text-align: left;
 }
 
 h2 {
-        margin-top      : 10px;
-        margin-right    : 5px;
-        margin-bottom   : 3px;
-        padding-left    : 3px;
-        border-bottom   : 1px solid #AAAAAA;
-        font-size       : 80%;
+  margin-top: 10px;
+  margin-right: 5px;
+  margin-bottom: 3px;
+  padding-left: 3px;
+  border-bottom: 1px solid #AAAAAA;
+  font-size: 80%;
+  text-align: left;
 }
 
-
 pre {
-        width           : 580px;
-        border          : 1px solid #000000;
-        padding         : 2px;
-        font-size       : 8pt;
-        overflow        : scroll;
+  width: 100%;
+  max-width: 580px;
+  border: 1px solid #000000;
+  padding: 2px;
+  font-size: 8pt;
+  overflow-x: auto;
 }
 
 #wrapper {
-        width           : 800px;
-        margin-left     : auto ;
-        margin-right    : auto ;
-        text-align      : left;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: left;
 }
 
 #header {
-        width           : 800px;
-        background-color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  width: 100%;
+  background-color: #FFFFFF;
 }
 
-img#logo {
-        width           : 200px;
-        height          : 40px;
-        float           : left;
+#header > a {
+  text-align: left;
+  font-weight: bold;
+  line-height: 40px;
+  display: block;
+  float: none;
 }
 
 div#header p{
-        display         : inline;
-        float           : right;
-        color           : #BBBBBB;
-        font-weight     : bold;
-        margin-top      : 24px;
-        margin-bottom   : 0pt;
+  display: flex;
+  gap: 8px;
+  float: none;
+  color: #BBBBBB;
+  font-weight: bold;
+  margin-top: 24px;
+  margin-bottom: 0pt;
+}
+
+img#logo {
+  width: 200px;
+  height: 40px;
+  display: block;
 }
 
 #topgrp {
-        border          : 0px solid #000000;
-        width           : 800px;
-        height          : 480px;
-        background      : transparent url("./grp/top.png") no-repeat top right ;
+  border: 0px solid #000000;
+  width: 100%;
+  height: 480px;
+  background: transparent url("./grp/top.png") no-repeat top right;
+  background-size: contain;
+}
+
+#top {
+  width: 100%;
+}
+#top img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 #main {
-        float           : left;
-        width           : 590px;
-        background-color: #FFFFFF;
-        margin-bottom   : 1%;
+  float: left;
+  width: 600px;
+  max-width: calc(100% - 200px);
+  background-color: #FFFFFF;
+  margin-bottom: 1%;
 }
 
 div#main img#icon {
-        margin-left     : 8px;
-        margin-right    : 8px;
-        float: left;
+  margin-left: 8px;
+  margin-right: 8px;
+  float: left;
 }
 
 div#main p {
-        padding-top     : 3px;
-        margin-left     : 6px;
+  padding-top: 3px;
+  margin-left: 6px;
+  overflow: hidden;
 }
-
 
 #extra {
-        width : 200px;
-        float: left;
+  width: 200px;
+  max-width: 100%;
+  float: left;
 }
-
 
 div#extra p {
-        padding-top     : 3px;
-        margin-left     : 6px;
+  padding-top: 3px;
+  margin-left: 6px;
 }
-
-
 
 #footer{
-        height          : 26px;
-        clear           : both;
-        padding         : 0.5% 0.5% 0.5% 0.5% ;
-        border-top      : 1px solid #000000;
-        border-bottom   : 2px solid #000000;
-        background-color: #FFFFFF;
-        color           : #BBBBBB;
-        font-style      : normal;
-        font-weight     : bold;
+  height: 26px;
+  clear: both;
+  padding: 0.5% 0.5% 0.5% 0.5%;
+  border-top: 1px solid #000000;
+  border-bottom: 2px solid #000000;
+  background-color: #FFFFFF;
+  color: #BBBBBB;
+  font-style: normal;
+  font-weight: bold;
+  display: flex;
+  flex-wrap: nowrap; 
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-div#footer p{
-        float: left;
-}
-
+div#footer p,
 div#footer address{
-        font-size       : 80%;
-        font-style      : normal;
-        float           : right;
+	margin:0;
+	font-size: 80%;
+	font-style: normal;
+	float: none;
 }
 
-#counter{
-        float: right;
+@media (max-width: 800px) {
+  body { padding: 10px; }
+  #main, #extra {
+    float: none;
+    width: 100%;
+    max-width: 100%;
+  }
+  #topgrp {
+    height: auto;
+    min-height: 200px;
+  }
 }
